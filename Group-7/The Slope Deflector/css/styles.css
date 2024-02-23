@@ -1,0 +1,286 @@
+/* import fonts */
+@font-face {
+    font-family: 'Digital-italic';
+    src: url('../fonts/DS-DIGIT.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Digital-bold';
+    src: url('../fonts/DS-DIGIB.woff2') format('woff2');
+}
+
+
+/* body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+}
+
+.nav-link {
+    color: #ecf0f1;
+}
+
+.heading,
+.intro {
+    font-family: 'Lato', sans-serif;
+    color: #ecf0f1;
+}
+
+/* sections */
+
+
+/* display */
+.display {
+    background-color: #688368;
+    /* Light gray background */
+    border: 1px solid #000000;
+    /* Black border */
+    /* rounded top corners */
+    border-radius: 10px 10px 0 0;
+    /* dark shadow within the screen */
+    box-shadow: inset 0 0 10px #000000;
+    /* Dark shadow */
+
+    padding: 20px;
+    /* Padding around the screen */
+    color: #001572;
+    /* Text color */
+    position: relative;
+    /* Position relative for child elements */
+    /* a calculator type text font */
+    font-family: 'Digital-bold', sans-serif;
+    width: 100%;
+    height: 400px;
+}
+
+#mode {
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    font-family: Digital-italic, sans-serif;
+
+}
+
+/* command */
+.command {
+    display: flex;
+    /* align vertical */
+    align-items: center;
+    /* I have 4 command buttons, so I want them to be spaced evenly but centered */
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60px;
+}
+
+/* command buttons */
+
+#reset {
+    background-color: #e74c3c;
+    color: black;
+    border-color: #e74c3c;
+}
+
+#move-left {
+    background-color: transparent;
+    color: black;
+    border-color: #2c3e50;
+}
+
+#move-right {
+    background-color: transparent;
+    color: black;
+    border-color: #2c3e50;
+}
+
+#solve {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+
+
+/* input */
+.input {
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    width: 100%;
+    height: 550px;
+
+}
+
+/* inputs */
+
+.menu-inputs {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.menu-input-toolbar {
+    position: relative;
+    width: 100%;
+    height: 10%;
+}
+
+#takeback-button {
+    background-color: #e74c3c;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+.menu-input-toolbar .btn {
+    /* align vertical */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-input-inputs {
+    width: 100%;
+    height: 70%;
+}
+
+.menu-inputs .btn {
+    color: #ecf0f1;
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.btn.direction {
+    background-color: white;
+}
+
+/* active */
+.btn.active {
+    background-color: #2c3e50
+}
+
+.btn-group .btn.active {
+    background-color: #1b60a5;
+}
+
+.element-input {
+    width: 100%;
+    height: 100%;
+}
+
+.add-on {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.add-on .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 82%;
+}
+
+/* Texts */
+
+/* error texts */
+.error-text {
+    color: rgb(255, 105, 105);
+    font-size: 12px;
+}
+
+/* moment text */
+.member-end-moments {
+    /* left justify the text */
+    text-align: left;
+    /* set top margin to 10px */
+    margin-top: 20px;
+}
+
+.fixed-end-moments {
+    /* left justify the text */
+    text-align: left;
+    /* set top margin to 10px */
+    margin-top: 20px;
+}
+
+.member-end-moment-equations {
+    /* left justify the text */
+    text-align: left;
+    /* set top margin to 10px */
+    margin-top: 20px;
+}
+
+.eliminated-known-variables {
+    /* left justify the text */
+    text-align: left;
+    /* set top margin to 10px */
+    margin-top: 20px;
+}
+
+.equations {
+    /* left justify the text */
+    text-align: left;
+    /* set top margin to 10px */
+    margin-top: 20px;
+}
+
+.rotations {
+    /* left justify the text */
+    text-align: left;
+    /* set top margin to 10px */
+    margin-top: 20px;
+}
+
+.visualizer {
+    /* left justify the text */
+    text-align: left;
+    /* set top margin to 10px */
+    margin-top: 20px;
+}
+
+/* Modal Button */
+#modal-btn {
+    border-radius: 10px;
+}
+
+/* Media Queries */
+
+/* For Large screens, I want to display the input and display floated side by side with the display on the left and the input on the right */
+@media (min-width: 992px) {
+    .display {
+        float: left;
+        width: 60%;
+        height: 550px;
+        /* round left corners */
+        border-radius: 10px 0 0 10px;
+    }
+
+    .input {
+        float: right;
+        width: 40%;
+        height: 550px;
+        /* round right corners, top and bottom */
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+/* For Medium screens, I want to display the input and display floated side by side with the display on the left and the input on the right */
+@media (min-width: 768px) and (max-width: 991px) {
+    .display {
+        float: left;
+        width: 60%;
+        height: 550px;
+        /* round left corners */
+        border-radius: 10px 0 0 10px;
+    }
+
+    .input {
+        float: right;
+        width: 40%;
+        height: 550px;
+        /* round right corners, top and bottom */
+        border-radius: 0 10px 10px 0;
+    }
+}
